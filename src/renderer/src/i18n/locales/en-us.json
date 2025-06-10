@@ -1062,6 +1062,23 @@
       "assistant.icon.type.emoji": "Emoji Icon",
       "assistant.icon.type.none": "Hide",
       "assistant.title": "Default Assistant",
+      "automata": {
+        "title": "HTTP Trigger",
+        "enabled": "Enabled",
+        "host": "Host",
+        "port": "Port",
+        "secret": "Secret",
+        "secret.placeholder": "Please enter secret",
+        "save.success": "Configuration saved successfully",
+        "save.error": "Failed to save configuration",
+        "status": "Status",
+        "example.title": "Usage Example",
+        "example.description": "Use the following curl command to trigger assistant conversation:",
+        "example.fields.title": "Request Fields Description",
+        "example.comment.secret": "If not configured, can be omitted",
+        "example.comment.assistant": "Assistant ID can be found in assistant edit page",
+        "example.comment.text": "Message content to send"
+      },
       "data": {
         "app_data": "App Data",
         "app_knowledge": "Knowledge Base Files",

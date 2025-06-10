@@ -1060,6 +1060,23 @@
       "assistant.icon.type.emoji": "Emoji иконка",
       "assistant.icon.type.none": "Не отображать",
       "assistant.title": "Ассистент по умолчанию",
+      "automata": {
+        "title": "HTTP-триггеры",
+        "enabled": "Включено",
+        "host": "Хост",
+        "port": "Порт",
+        "secret": "Секретный ключ",
+        "secret.placeholder": "Введите секретный ключ",
+        "save.success": "Конфигурация успешно сохранена",
+        "save.error": "Не удалось сохранить конфигурацию",
+        "status": "Статус",
+        "example.title": "Пример использования",
+        "example.description": "Используйте следующую команду curl для запуска разговора с ассистентом:",
+        "example.fields.title": "Описание полей запроса",
+        "example.comment.secret": "Если не настроено, можно пропустить",
+        "example.comment.assistant": "ID ассистента можно найти на странице редактирования ассистента",
+        "example.comment.text": "Содержимое сообщения для отправки"
+      },
       "data": {
         "app_data": "Данные приложения",
         "app_knowledge": "База знаний",

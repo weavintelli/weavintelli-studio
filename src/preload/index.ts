@@ -229,6 +229,11 @@ const api = {
     minimizeActionWindow: () => ipcRenderer.invoke(IpcChannel.Selection_ActionWindowMinimize),
     pinActionWindow: (isPinned: boolean) => ipcRenderer.invoke(IpcChannel.Selection_ActionWindowPin, isPinned)
   },
+  automata: {
+    getStatus: () => ipcRenderer.invoke(IpcChannel.Automata_GetStatus),
+    getConfig: () => ipcRenderer.invoke(IpcChannel.Automata_GetConfig),
+    setConfig: (config: any) => ipcRenderer.invoke(IpcChannel.Automata_SetConfig, config)
+  },
   quoteToMainWindow: (text: string) => ipcRenderer.invoke(IpcChannel.App_QuoteToMain, text)
 }
 

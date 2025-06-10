@@ -1062,6 +1062,23 @@
       "assistant.icon.type.emoji": "Emoji 表情",
       "assistant.icon.type.none": "不顯示",
       "assistant.title": "預設助手",
+      "automata": {
+        "title": "HTTP觸發",
+        "enabled": "啟用",
+        "host": "主機位址",
+        "port": "連接埠",
+        "secret": "金鑰",
+        "secret.placeholder": "請輸入金鑰",
+        "save.success": "設定儲存成功",
+        "save.error": "設定儲存失敗",
+        "status": "狀態",
+        "example.title": "使用範例",
+        "example.description": "使用以下 curl 指令來觸發助手對話：",
+        "example.fields.title": "請求欄位說明",
+        "example.comment.secret": "如果未設定，可以忽略",
+        "example.comment.assistant": "可以在助手編輯頁面看到 ID",
+        "example.comment.text": "要傳送的訊息內容"
+      },
       "data": {
         "app_data": "應用程式資料",
         "app_knowledge": "知識庫文件",

@@ -47,6 +47,18 @@ export function registerIpc(mainWindow: BrowserWindow, app: Electron.App) {
   const notificationService = new NotificationService(mainWindow)
   const automataService = new AutomataService(mainWindow)
 
+  ipcMain.handle(IpcChannel.Automata_GetStatus, () => {
+    return automataService.getStatus()
+  })
+
+  ipcMain.handle(IpcChannel.Automata_GetConfig, () => {
+    return automataService.getConfig()
+  })
+
+  ipcMain.handle(IpcChannel.Automata_SetConfig, (_, config: any) => {
+    automataService.setConfig(config)
+  })
+
   ipcMain.handle(IpcChannel.App_Info, () => ({
     version: app.getVersion(),
     isPackaged: app.isPackaged,

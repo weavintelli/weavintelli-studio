@@ -32,6 +32,7 @@ import QuickPhraseSettings from './QuickPhraseSettings'
 import SelectionAssistantSettings from './SelectionAssistantSettings/SelectionAssistantSettings'
 import ShortcutSettings from './ShortcutSettings'
 import WebSearchSettings from './WebSearchSettings'
+import AutomataSettings from './AutomataSettings'
 
 const SettingsPage: FC = () => {
   const { pathname } = useLocation()
@@ -113,6 +114,12 @@ const SettingsPage: FC = () => {
               {t('settings.data.title')}
             </MenuItem>
           </MenuItemLink>
+          <MenuItemLink to="/settings/automata">
+            <MenuItem className={isRoute('/settings/automata')}>
+              <Rocket size={18} />
+              {t('settings.automata.title')}
+            </MenuItem>
+          </MenuItemLink>
           <MenuItemLink to="/settings/about">
             <MenuItem className={isRoute('/settings/about')}>
               <Info size={18} />
@@ -134,6 +141,7 @@ const SettingsPage: FC = () => {
             <Route path="data" element={<DataSettings />} />
             <Route path="about" element={<AboutSettings />} />
             <Route path="quickPhrase" element={<QuickPhraseSettings />} />
+            <Route path="automata" element={<AutomataSettings />} />
           </Routes>
         </SettingContent>
       </ContentContainer>

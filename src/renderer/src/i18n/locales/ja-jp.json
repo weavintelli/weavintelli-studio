@@ -1060,6 +1060,23 @@
       "assistant.icon.type.emoji": "Emoji アイコン",
       "assistant.icon.type.none": "表示しない",
       "assistant.title": "デフォルトアシスタント",
+      "automata": {
+        "title": "HTTP トリガー",
+        "enabled": "有効",
+        "host": "ホスト",
+        "port": "ポート",
+        "secret": "シークレット",
+        "secret.placeholder": "シークレットを入力してください",
+        "save.success": "設定の保存に成功しました",
+        "save.error": "設定の保存に失敗しました",
+        "status": "ステータス",
+        "example.title": "使用例",
+        "example.description": "以下のcurlコマンドを使用してアシスタント会話をトリガーします：",
+        "example.fields.title": "リクエストフィールドの説明",
+        "example.comment.secret": "未設定の場合は省略可能",
+        "example.comment.assistant": "アシスタント編集ページでIDを確認できます",
+        "example.comment.text": "送信するメッセージ内容"
+      },
       "data": {
         "app_data": "アプリデータ",
         "app_knowledge": "ナレッジベースファイル",

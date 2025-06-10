@@ -2,6 +2,10 @@ export enum IpcChannel {
   Automata_Click = 'automata:click',
   Automata_UpdateTextarea = 'automata:update-textarea',
 
+  Automata_GetStatus = 'automata:get-status',
+  Automata_GetConfig = 'automata:get-config',
+  Automata_SetConfig = 'automata:set-config',
+
   App_GetCacheSize = 'app:get-cache-size',
   App_ClearCache = 'app:clear-cache',
   App_SetLaunchOnBoot = 'app:set-launch-on-boot',

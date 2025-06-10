@@ -24,6 +24,7 @@ export enum ConfigKeys {
   SelectionAssistantRemeberWinSize = 'selectionAssistantRemeberWinSize',
   SelectionAssistantFilterMode = 'selectionAssistantFilterMode',
   SelectionAssistantFilterList = 'selectionAssistantFilterList',
+  HTTPTriggerEnabled = 'httpTriggerEnabled',
   HTTPTriggerHost = 'httpTriggerHost',
   HTTPTriggerPort = 'httpTriggerPort',
   HTTPTriggerSecret = 'httpTriggerSecret'
@@ -37,12 +38,20 @@ export class ConfigManager {
     this.store = new Store()
   }
 
+  getHTTPTriggerEnabled(): boolean {
+    return this.get<boolean>(ConfigKeys.HTTPTriggerEnabled, false)
+  }
+
+  setHTTPTriggerEnabled(value: boolean) {
+    this.set(ConfigKeys.HTTPTriggerEnabled, value)
+  }
+
   getHTTPTriggerHost(): string {
     return this.get<string>(ConfigKeys.HTTPTriggerHost, '127.0.0.1')
   }
 
   setHTTPTriggerHost(value: string) {
-    this.setAndNotify(ConfigKeys.HTTPTriggerHost, value)
+    this.set(ConfigKeys.HTTPTriggerHost, value)
   }
 
   getHTTPTriggerPort(): number {
@@ -50,7 +59,7 @@ export class ConfigManager {
   }
 
   setHTTPTriggerPort(value: number) {
-    this.setAndNotify(ConfigKeys.HTTPTriggerPort, value)
+    this.set(ConfigKeys.HTTPTriggerPort, value)
   }
 
   getHTTPTriggerSecret(): string {
