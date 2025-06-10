@@ -1,11 +1,11 @@
 {
-  "name": "CherryStudio",
+  "name": "weavintelli-studio",
   "version": "1.4.1",
   "private": true,
-  "description": "A powerful AI assistant for producer.",
+  "description": "A forked version of Cherry Studio",
   "main": "./out/main/index.js",
-  "author": "support@cherry-ai.com",
-  "homepage": "https://github.com/CherryHQ/cherry-studio",
+  "author": "hello@weavin.cn",
+  "homepage": "https://github.com/weavintelli/weavintelli-studio",
   "workspaces": {
     "packages": [
       "local",
