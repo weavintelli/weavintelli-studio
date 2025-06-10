@@ -1,5 +1,5 @@
-appId: com.kangfenmao.CherryStudio
-productName: Cherry Studio
+appId: cn.weavin.weavintelli-studio
+productName: weavIntelli Studio
 electronLanguages:
   - zh-CN
   - zh-TW
