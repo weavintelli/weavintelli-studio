@@ -97,9 +97,9 @@ linux:
       StartupWMClass: CherryStudio
   mimeTypes:
     - x-scheme-handler/cherrystudio
-publish:
-  provider: generic
-  url: https://releases.cherry-ai.com
+#publish:
+#  provider: generic
+#  url: https://releases.cherry-ai.com
 electronDownload:
   mirror: https://npmmirror.com/mirrors/electron/
 afterPack: scripts/after-pack.js
@@ -107,8 +107,4 @@ afterSign: scripts/notarize.js
 artifactBuildCompleted: scripts/artifact-build-completed.js
 releaseInfo:
   releaseNotes: |
-    新增划词助手
-    助手支持分组
-    支持主题颜色切换
-    划词助手支持应用过滤
-    翻译模块功能改进
+    新增HTTP触发器
