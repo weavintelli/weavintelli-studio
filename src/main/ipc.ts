@@ -35,6 +35,7 @@ import { decrypt, encrypt } from './utils/aes'
 import { getCacheDir, getConfigDir, getFilesDir } from './utils/file'
 import { compress, decompress } from './utils/zip'
 import { FeedUrl } from '@shared/config/constant'
+import { AutomataService } from './services/AutomataService'
 
 const fileManager = new FileStorage()
 const backupManager = new BackupManager()
@@ -44,6 +45,7 @@ const obsidianVaultService = new ObsidianVaultService()
 export function registerIpc(mainWindow: BrowserWindow, app: Electron.App) {
   const appUpdater = new AppUpdater(mainWindow)
   const notificationService = new NotificationService(mainWindow)
+  const automataService = new AutomataService(mainWindow)
 
   ipcMain.handle(IpcChannel.App_Info, () => ({
     version: app.getVersion(),

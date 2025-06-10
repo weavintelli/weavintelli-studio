@@ -21,8 +21,10 @@ import KnowledgePage from './pages/knowledge/KnowledgePage'
 import PaintingsRoutePage from './pages/paintings/PaintingsRoutePage'
 import SettingsPage from './pages/settings/SettingsPage'
 import TranslatePage from './pages/translate/TranslatePage'
+import { useAutomata } from './hooks/useAutomata'
 
 function App(): React.ReactElement {
+  const automata = useAutomata()
   return (
     <Provider store={store}>
       <StyleSheetManager>

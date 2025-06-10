@@ -59,7 +59,11 @@ const AssistantPromptSettings: React.FC<Props> = ({ assistant, updateAssistant }
 
   return (
     <Container>
-      <Box mb={8} style={{ fontWeight: 'bold' }}>
+      <Box mt={8} mb={8} style={{ fontWeight: 'bold' }}>
+        ID
+      </Box>
+      <Input disabled={true} value={assistant.id} style={{ flex: 1 }} />
+      <Box mt={8} mb={8} style={{ fontWeight: 'bold' }}>
         {t('common.name')}
       </Box>
       <HStack gap={8} alignItems="center">
@@ -118,7 +122,7 @@ const AssistantPromptSettings: React.FC<Props> = ({ assistant, updateAssistant }
             }}
             autoFocus={true}
             spellCheck={false}
-            style={{ minHeight: 'calc(80vh - 200px)', maxHeight: 'calc(80vh - 200px)', paddingBottom: '30px' }}
+            style={{ minHeight: 'calc(80vh - 300px)', maxHeight: 'calc(80vh - 300px)', paddingBottom: '30px' }}
           />
         )}
       </TextAreaContainer>

@@ -1,3 +1,4 @@
+import { AutomataKey } from '@shared/IpcChannel'
 import { FC } from 'react'
 
 interface Props {
@@ -8,7 +9,7 @@ interface Props {
 const SendMessageButton: FC<Props> = ({ disabled, sendMessage }) => {
   return (
     <i
-      className="iconfont icon-ic_send"
+      className={`iconfont icon-ic_send ${AutomataKey.ClickableSendChatMessage}`}
       onClick={sendMessage}
       style={{
         cursor: disabled ? 'not-allowed' : 'pointer',

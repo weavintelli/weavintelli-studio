@@ -36,7 +36,7 @@ import { classNames, delay, formatFileSize, getFileExtension } from '@renderer/u
 import { formatQuotedText } from '@renderer/utils/formats'
 import { getFilesFromDropEvent } from '@renderer/utils/input'
 import { documentExts, imageExts, textExts } from '@shared/config/constant'
-import { IpcChannel } from '@shared/IpcChannel'
+import { AutomataKey, IpcChannel } from '@shared/IpcChannel'
 import { Button, Tooltip } from 'antd'
 import TextArea, { TextAreaRef } from 'antd/es/input/TextArea'
 import dayjs from 'dayjs'
@@ -794,6 +794,7 @@ const Inputbar: FC<Props> = ({ assistant: _assistant, setActiveTopic, topic }) =
             <MentionModelsInput selectedModels={mentionModels} onRemoveModel={handleRemoveModel} />
           )}
           <Textarea
+            className={AutomataKey.InputChatMessage}
             value={text}
             onChange={onChange}
             onKeyDown={handleKeyDown}

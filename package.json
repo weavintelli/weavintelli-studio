@@ -129,6 +129,7 @@
     "@testing-library/react": "^16.3.0",
     "@tryfabric/martian": "^1.2.4",
     "@types/diff": "^7",
+    "@types/express": "^5.0.3",
     "@types/fs-extra": "^11",
     "@types/lodash": "^4.17.5",
     "@types/markdown-it": "^14",

@@ -29,6 +29,7 @@ import { FC, memo, startTransition, useCallback, useEffect, useMemo, useState } 
 import { useTranslation } from 'react-i18next'
 import styled from 'styled-components'
 import * as tinyPinyin from 'tiny-pinyin'
+import { AutomataKey } from '@shared/IpcChannel'
 
 import AssistantTagsPopup from './AssistantTagsPopup'
 
@@ -141,7 +142,9 @@ const AssistantItem: FC<AssistantItemProps> = ({
 
   return (
     <Dropdown menu={{ items: menuItems }} trigger={['contextMenu']}>
-      <Container onClick={handleSwitch} className={isActive ? 'active' : ''}>
+      <Container
+        onClick={handleSwitch}
+        className={`${isActive ? 'active' : ''} ${AutomataKey.ClickableAssistantPrefix + assistant.id}`}>
         <AssistantNameRow className="name" title={fullAssistantName}>
           {assistantIconType === 'model' ? (
             <ModelAvatar

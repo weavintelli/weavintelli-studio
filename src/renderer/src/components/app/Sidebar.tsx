@@ -36,6 +36,7 @@ import styled from 'styled-components'
 import DragableList from '../DragableList'
 import MinAppIcon from '../Icons/MinAppIcon'
 import UserPopup from '../Popups/UserPopup'
+import { AutomataKey } from '@shared/IpcChannel'
 
 const Sidebar: FC = () => {
   const { hideMinappPopup, openMinapp } = useMinappPopup()
@@ -175,6 +176,7 @@ const MainMenus: FC = () => {
     return (
       <Tooltip key={icon} title={t(`${icon}.title`)} mouseEnterDelay={0.8} placement="right">
         <StyledLink
+          className={AutomataKey.ClickableSidebarPrefix + icon}
           onClick={async () => {
             hideMinappPopup()
             await modelGenerating()

@@ -9,6 +9,7 @@ import { Segmented as AntSegmented, SegmentedProps } from 'antd'
 import { FC, useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import styled from 'styled-components'
+import { AutomataKey } from '@shared/IpcChannel'
 
 import Assistants from './AssistantsTab'
 import Settings from './SettingsTab'
@@ -56,6 +57,7 @@ const HomeTabs: FC<Props> = ({
   const showTab = !(position === 'left' && topicPosition === 'right')
 
   const assistantTab = {
+    className: AutomataKey.ClickableTabbarAssistants,
     label: t('assistants.abbr'),
     value: 'assistants'
     // icon: <BotIcon size={16} />

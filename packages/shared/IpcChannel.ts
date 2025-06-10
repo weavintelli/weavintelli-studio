@@ -1,4 +1,7 @@
 export enum IpcChannel {
+  Automata_Click = 'automata:click',
+  Automata_UpdateTextarea = 'automata:update-textarea',
+
   App_GetCacheSize = 'app:get-cache-size',
   App_ClearCache = 'app:clear-cache',
   App_SetLaunchOnBoot = 'app:set-launch-on-boot',
@@ -198,4 +201,12 @@ export enum IpcChannel {
   Selection_ActionWindowPin = 'selection:action-window-pin',
   Selection_ProcessAction = 'selection:process-action',
   Selection_UpdateActionData = 'selection:update-action-data'
+}
+
+export enum AutomataKey {
+  ClickableSidebarPrefix = 'automata-clickable-sidebar-',
+  ClickableTabbarAssistants = 'automata-clickable-tabbar-assistants',
+  ClickableAssistantPrefix = 'automata-clickable-assistant-',
+  ClickableSendChatMessage = 'automata-clickable-send-chat-message',
+  InputChatMessage = 'automata-input-chat-message'
 }
