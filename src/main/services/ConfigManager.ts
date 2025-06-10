@@ -171,7 +171,7 @@ export class ConfigManager {
   }
 
   getAutoUpdate(): boolean {
-    return this.get<boolean>(ConfigKeys.AutoUpdate, true)
+    return this.get<boolean>(ConfigKeys.AutoUpdate, false)
   }
 
   setAutoUpdate(value: boolean) {

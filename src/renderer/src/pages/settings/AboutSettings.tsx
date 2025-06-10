@@ -111,7 +111,7 @@ const AboutSettings: FC = () => {
         <SettingTitle>
           {t('settings.about.title')}
           <HStack alignItems="center">
-            <Link to="https://github.com/CherryHQ/cherry-studio">
+            <Link to="https://github.com/weavintelli/weavintelli-studio">
               <GithubOutlined style={{ marginRight: 4, color: 'var(--color-text)', fontSize: 20 }} />
             </Link>
           </HStack>
@@ -119,7 +119,7 @@ const AboutSettings: FC = () => {
         <SettingDivider />
         <AboutHeader>
           <Row align="middle">
-            <AvatarWrapper onClick={() => onOpenWebsite('https://github.com/CherryHQ/cherry-studio')}>
+            <AvatarWrapper onClick={() => onOpenWebsite('https://github.com/weavintelli/weavintelli-studio')}>
               {update.downloadProgress > 0 && (
                 <ProgressCircle
                   type="circle"
@@ -136,14 +136,15 @@ const AboutSettings: FC = () => {
               <Title>{APP_NAME}</Title>
               <Description>{t('settings.about.description')}</Description>
               <Tag
-                onClick={() => onOpenWebsite('https://github.com/CherryHQ/cherry-studio/releases')}
+                onClick={() => onOpenWebsite('https://github.com/weavintelli/weavintelli-studio')}
                 color="cyan"
                 style={{ marginTop: 8, cursor: 'pointer' }}>
                 v{version}
               </Tag>
             </VersionWrapper>
           </Row>
-          {!isPortable && (
+          {/* disable for now */}
+          {1 > 2 && !isPortable && (
             <CheckUpdateButton
               onClick={onCheckUpdate}
               loading={update.checking}
@@ -156,7 +157,8 @@ const AboutSettings: FC = () => {
             </CheckUpdateButton>
           )}
         </AboutHeader>
-        {!isPortable && (
+        {/* disable for now */}
+        {1 > 2 && !isPortable && (
           <>
             <SettingDivider />
             <SettingRow>
@@ -173,7 +175,8 @@ const AboutSettings: FC = () => {
           </>
         )}
       </SettingGroup>
-      {hasNewVersion && update.info && (
+      {/* disable for now */}
+      {1 > 2 && hasNewVersion && update.info && (
         <SettingGroup theme={theme}>
           <SettingRow>
             <SettingRowTitle>
@@ -190,57 +193,60 @@ const AboutSettings: FC = () => {
           </UpdateNotesWrapper>
         </SettingGroup>
       )}
-      <SettingGroup theme={theme}>
-        <SettingRow>
-          <SettingRowTitle>
-            <Rss size={18} />
-            {t('settings.about.releases.title')}
-          </SettingRowTitle>
-          <Button onClick={showReleases}>{t('settings.about.releases.button')}</Button>
-        </SettingRow>
-        <SettingDivider />
-        <SettingRow>
-          <SettingRowTitle>
-            <Globe size={18} />
-            {t('settings.about.website.title')}
-          </SettingRowTitle>
-          <Button onClick={() => onOpenWebsite('https://cherry-ai.com')}>{t('settings.about.website.button')}</Button>
-        </SettingRow>
-        <SettingDivider />
-        <SettingRow>
-          <SettingRowTitle>
-            <Github size={18} />
-            {t('settings.about.feedback.title')}
-          </SettingRowTitle>
-          <Button onClick={() => onOpenWebsite('https://github.com/CherryHQ/cherry-studio/issues/new/choose')}>
-            {t('settings.about.feedback.button')}
-          </Button>
-        </SettingRow>
-        <SettingDivider />
-        <SettingRow>
-          <SettingRowTitle>
-            <FileCheck size={18} />
-            {t('settings.about.license.title')}
-          </SettingRowTitle>
-          <Button onClick={showLicense}>{t('settings.about.license.button')}</Button>
-        </SettingRow>
-        <SettingDivider />
-        <SettingRow>
-          <SettingRowTitle>
-            <Mail size={18} />
-            {t('settings.about.contact.title')}
-          </SettingRowTitle>
-          <Button onClick={mailto}>{t('settings.about.contact.button')}</Button>
-        </SettingRow>
-        <SettingDivider />
-        <SettingRow>
-          <SettingRowTitle>
-            <Bug size={18} />
-            {t('settings.about.debug.title')}
-          </SettingRowTitle>
-          <Button onClick={debug}>{t('settings.about.debug.open')}</Button>
-        </SettingRow>
-      </SettingGroup>
+      {/* disable for now */}
+      {1 > 2 && (
+        <SettingGroup theme={theme}>
+          <SettingRow>
+            <SettingRowTitle>
+              <Rss size={18} />
+              {t('settings.about.releases.title')}
+            </SettingRowTitle>
+            <Button onClick={showReleases}>{t('settings.about.releases.button')}</Button>
+          </SettingRow>
+          <SettingDivider />
+          <SettingRow>
+            <SettingRowTitle>
+              <Globe size={18} />
+              {t('settings.about.website.title')}
+            </SettingRowTitle>
+            <Button onClick={() => onOpenWebsite('https://cherry-ai.com')}>{t('settings.about.website.button')}</Button>
+          </SettingRow>
+          <SettingDivider />
+          <SettingRow>
+            <SettingRowTitle>
+              <Github size={18} />
+              {t('settings.about.feedback.title')}
+            </SettingRowTitle>
+            <Button onClick={() => onOpenWebsite('https://github.com/CherryHQ/cherry-studio/issues/new/choose')}>
+              {t('settings.about.feedback.button')}
+            </Button>
+          </SettingRow>
+          <SettingDivider />
+          <SettingRow>
+            <SettingRowTitle>
+              <FileCheck size={18} />
+              {t('settings.about.license.title')}
+            </SettingRowTitle>
+            <Button onClick={showLicense}>{t('settings.about.license.button')}</Button>
+          </SettingRow>
+          <SettingDivider />
+          <SettingRow>
+            <SettingRowTitle>
+              <Mail size={18} />
+              {t('settings.about.contact.title')}
+            </SettingRowTitle>
+            <Button onClick={mailto}>{t('settings.about.contact.button')}</Button>
+          </SettingRow>
+          <SettingDivider />
+          <SettingRow>
+            <SettingRowTitle>
+              <Bug size={18} />
+              {t('settings.about.debug.title')}
+            </SettingRowTitle>
+            <Button onClick={debug}>{t('settings.about.debug.open')}</Button>
+          </SettingRow>
+        </SettingGroup>
+      )}
     </SettingContainer>
   )
 }
