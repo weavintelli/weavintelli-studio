@@ -23,7 +23,9 @@ export enum ConfigKeys {
   SelectionAssistantFollowToolbar = 'selectionAssistantFollowToolbar',
   SelectionAssistantRemeberWinSize = 'selectionAssistantRemeberWinSize',
   SelectionAssistantFilterMode = 'selectionAssistantFilterMode',
-  SelectionAssistantFilterList = 'selectionAssistantFilterList'
+  SelectionAssistantFilterList = 'selectionAssistantFilterList',
+  HTTPTriggerPort = 'httpTriggerPort',
+  HTTPTriggerSecret = 'httpTriggerSecret'
 }
 
 export class ConfigManager {
@@ -32,6 +34,22 @@ export class ConfigManager {
 
   constructor() {
     this.store = new Store()
+  }
+
+  getHTTPTriggerPort(): number {
+    return this.get<number>(ConfigKeys.HTTPTriggerPort, 8866)
+  }
+
+  setHTTPTriggerPort(value: number) {
+    this.set(ConfigKeys.HTTPTriggerPort, value)
+  }
+
+  getHTTPTriggerSecret(): string {
+    return this.get<string>(ConfigKeys.HTTPTriggerSecret, 'weavintelli-studio')
+  }
+
+  setHTTPTriggerSecret(value: string) {
+    this.set(ConfigKeys.HTTPTriggerSecret, value)
   }
 
   getLanguage(): LanguageVarious {
