@@ -565,8 +565,12 @@
       "urls": "網址",
       "dimensions": "嵌入維度",
       "dimensions_size_tooltip": "嵌入維度大小，數值越大，嵌入維度越大，但消耗的 Token 也越多",
-      "dimensions_size_placeholder": "預設值（不建議修改）",
-      "dimensions_size_too_large": "嵌入維度不能超過模型上下文限制（{{max_context}}）"
+      "dimensions_size_placeholder": " 嵌入維度大小，例如 1024",
+      "dimensions_auto_set": "自動設定嵌入維度",
+      "dimensions_error_invalid": "請輸入嵌入維度大小",
+      "dimensions_size_too_large": "嵌入維度不能超過模型上下文限制（{{max_context}}）",
+      "dimensions_set_right": "⚠️ 請確保模型支援所設置的嵌入維度大小",
+      "dimensions_default": "模型將使用預設嵌入維度"
     },
     "languages": {
       "arabic": "阿拉伯文",
@@ -1560,6 +1564,7 @@
       "models.add.model_id.tooltip": "例如 gpt-3.5-turbo",
       "models.add.model_name": "模型名稱",
       "models.add.model_name.placeholder": "選填，例如 GPT-4",
+      "models.add.model_name.tooltip": "例如 GPT-4",
       "models.check.all": "所有",
       "models.check.all_models_passed": "所有模型檢查通過",
       "models.check.button_caption": "健康檢查",
