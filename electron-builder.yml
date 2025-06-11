@@ -53,7 +53,7 @@ asarUnpack:
   - resources/**
   - '**/*.{metal,exp,lib}'
 win:
-  executableName: Cherry Studio
+  executableName: WeavIntelli Studio
   artifactName: ${productName}-${version}-${arch}-setup.${ext}
   target:
     - target: nsis
@@ -94,7 +94,7 @@ linux:
   category: Utility
   desktop:
     entry:
-      StartupWMClass: CherryStudio
+      StartupWMClass: WeavIntelli Studio
   mimeTypes:
     - x-scheme-handler/cherrystudio
 #publish:
