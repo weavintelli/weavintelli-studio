@@ -56,7 +56,8 @@
     "format": "prettier --write .",
     "lint": "eslint . --ext .js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix",
     "prepare": "husky",
-    "i18n:update": "tsx scripts/update-i18n.ts"
+    "i18n:update": "tsx scripts/update-i18n.ts",
+    "i18n:check": "tsx scripts/check-i18n.ts"
   },
   "dependencies": {
     "@cherrystudio/embedjs": "^0.1.31",
