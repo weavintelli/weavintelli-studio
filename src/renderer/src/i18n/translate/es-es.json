@@ -43,6 +43,9 @@
       },
       "export": {
         "agent": "Exportar Agente"
+      },
+      "settings": {
+        "title": "Configuración del agente"
       }
     },
     "assistants": {
@@ -89,7 +92,23 @@
       "settings.knowledge_base.recognition.off": "Búsqueda forzada",
       "settings.knowledge_base.recognition.on": "Reconocimiento de intención",
       "settings.reasoning_effort.default": "Por defecto",
-      "settings.more": "Configuración del Asistente"
+      "settings.more": "Configuración del Asistente",
+      "list": {
+        "showByList": "Mostrar por lista",
+        "showByTags": "Mostrar por etiquetas"
+      },
+      "tags": {
+        "settings": {
+          "title": "Configuración de etiquetas"
+        },
+        "none": "Sin etiquetas aún",
+        "manage": "Gestionar etiquetas",
+        "add": "Agregar etiqueta",
+        "untagged": "Sin agrupar",
+        "modify": "Modificar etiqueta",
+        "delete": "Eliminar etiqueta",
+        "deleteConfirm": "¿Estás seguro de eliminar esta etiqueta?"
+      }
     },
     "auth": {
       "error": "Falló la obtención automática de la clave, por favor obténla manualmente",
@@ -101,7 +120,6 @@
     "backup": {
       "confirm": "¿Está seguro de que desea realizar una copia de seguridad de los datos?",
       "confirm.button": "Seleccionar ubicación de copia de seguridad",
-      "confirm.file_checkbox": "El tamaño del archivo es {{size}}, ¿desea elegir el archivo de copia de seguridad?",
       "content": "Realizar una copia de seguridad de todos los datos, incluyendo registros de chat, configuraciones, bases de conocimiento y todos los demás datos. Tenga en cuenta que el proceso de copia de seguridad puede llevar algún tiempo, gracias por su paciencia.",
       "progress": {
         "completed": "Copia de seguridad completada",
@@ -120,7 +138,10 @@
       "manage": "Administrar",
       "select_model": "Seleccionar Modelo",
       "show.all": "Mostrar Todo",
-      "update_available": "Hay Actualizaciones Disponibles"
+      "update_available": "Hay Actualizaciones Disponibles",
+      "includes_user_questions": "Incluir preguntas del usuario",
+      "case_sensitive": "Distinguir mayúsculas y minúsculas",
+      "whole_word": "Coincidencia exacta"
     },
     "chat": {
       "add.assistant.title": "Agregar asistente",
@@ -287,13 +308,20 @@
       "topics.export.siyuan": "Exportar a SiYuan Notes",
       "topics.export.wait_for_title_naming": "Generando título...",
       "topics.export.title_naming_success": "Título generado exitosamente",
-      "topics.export.title_naming_failed": "Fallo al generar el título, usando el título predeterminado"
+      "topics.export.title_naming_failed": "Fallo al generar el título, usando el título predeterminado",
+      "settings.code_editor": {},
+      "settings.code_execution": {}
     },
     "code_block": {
       "collapse": "Replegar",
-      "disable_wrap": "Deshabilitar salto de línea",
-      "enable_wrap": "Habilitar salto de línea",
-      "expand": "Expandir"
+      "expand": "Expandir",
+      "copy": "Copiar",
+      "download": "Descargar",
+      "edit": "Editar",
+      "more": "Más",
+      "preview": "Vista previa",
+      "run": "Ejecutar código",
+      "split": "Dividir vista"
     },
     "common": {
       "add": "Agregar",
@@ -347,7 +375,10 @@
       "inspect": "Inspeccionar",
       "collapse": "Colapsar",
       "loading": "Cargando...",
-      "reasoning_content": "Pensamiento profundo"
+      "reasoning_content": "Pensamiento profundo",
+      "selectedMessages": "{{count}} mensajes seleccionados",
+      "success": "Éxito",
+      "no_results": "Sin resultados"
     },
     "docs": {
       "title": "Documentación de Ayuda"
@@ -483,7 +514,6 @@
       "threshold_tooltip": "Se usa para medir la relevancia entre la pregunta del usuario y el contenido de la base de conocimientos (0-1)",
       "title": "Base de conocimientos",
       "topN": "Número de resultados devueltos",
-      "topN__too_large_or_small": "El número de resultados devueltos no puede ser mayor que 100 o menor que 1",
       "topN_placeholder": "No configurado",
       "topN_tooltip": "Número de resultados coincidentes devueltos, un valor más alto significa más resultados coincidentes, pero también consume más tokens",
       "url_added": "URL agregada",
@@ -496,7 +526,8 @@
       "dimensions_error_invalid": "Por favor ingrese el tamaño de dimensión de incrustación",
       "dimensions_size_too_large": "La dimensión de incrustación no puede exceder el límite del contexto del modelo ({{max_context}})",
       "dimensions_set_right": "⚠️ Asegúrese de que el modelo admita el tamaño de dimensión de incrustación establecido",
-      "dimensions_default": "El modelo utilizará las dimensiones de incrustación predeterminadas"
+      "dimensions_default": "El modelo utilizará las dimensiones de incrustación predeterminadas",
+      "topN_too_large_or_small": "La cantidad de resultados devueltos no puede ser mayor a 30 ni menor a 1"
     },
     "languages": {
       "arabic": "Árabe",
@@ -510,28 +541,20 @@
       "korean": "Coreano",
       "portuguese": "Portugués",
       "russian": "Ruso",
-      "spanish": "Español"
+      "spanish": "Español",
+      "polish": "Polaco",
+      "turkish": "Turco",
+      "thai": "Tailandés",
+      "vietnamese": "Vietnamita",
+      "indonesian": "Indonesio",
+      "urdu": "Urdu",
+      "malay": "Malayo"
     },
     "lmstudio": {
       "keep_alive_time.description": "Tiempo que el modelo permanece en memoria después de la conversación (predeterminado: 5 minutos)",
       "keep_alive_time.placeholder": "minutos",
       "keep_alive_time.title": "Tiempo de Actividad",
       "title": "LM Studio"
-    },
-    "mermaid": {
-      "download": {
-        "png": "Descargar PNG",
-        "svg": "Descargar SVG"
-      },
-      "resize": {
-        "zoom-in": "Acercar",
-        "zoom-out": "Alejar"
-      },
-      "tabs": {
-        "preview": "Vista previa",
-        "source": "Código fuente"
-      },
-      "title": "Gráfico Mermaid"
     },
     "message": {
       "api.check.model.title": "Seleccione el modelo a verificar",
@@ -632,7 +655,8 @@
       "warn.yuque.exporting": "Exportando Yuque, ¡no solicite la exportación nuevamente!",
       "warn.siyuan.exporting": "Exportando a Siyuan, ¡no solicite la exportación nuevamente!",
       "download.success": "Descarga exitosa",
-      "download.failed": "Descarga fallida"
+      "download.failed": "Descarga fallida",
+      "empty_url": "No se puede descargar la imagen, posiblemente debido a contenido sensible o palabras prohibidas en el prompt"
     },
     "minapp": {
       "title": "Mini programa",
@@ -644,7 +668,9 @@
         "openExternal": "Abrir en el navegador",
         "rightclick_copyurl": "Copiar URL con clic derecho",
         "open_link_external_on": "Actual: Abrir enlaces en el navegador",
-        "open_link_external_off": "Actual: Abrir enlaces en ventana predeterminada"
+        "open_link_external_off": "Actual: Abrir enlaces en ventana predeterminada",
+        "goBack": "Atrás",
+        "goForward": "Adelante"
       },
       "sidebar": {
         "add": {
@@ -775,7 +801,10 @@
         "seed_tip": "Controla la aleatoriedad en la generación de imágenes, útil para reproducir resultados idénticos",
         "negative_prompt_tip": "Describe elementos que no deseas en la imagen. Solo compatible con las versiones V_1, V_1_TURBO, V_2 y V_2_TURBO",
         "magic_prompt_option_tip": "Optimización inteligente de indicaciones para mejorar los resultados de generación",
-        "style_type_tip": "Estilo de generación de imágenes, solo aplicable para la versión V_2 y posteriores"
+        "style_type_tip": "Estilo de generación de imágenes, solo aplicable para la versión V_2 y posteriores",
+        "rendering_speed_tip": "Controla el equilibrio entre velocidad y calidad de renderizado, solo aplica para la versión V_3",
+        "person_generation": "Generar personas",
+        "person_generation_tip": "Permite al modelo generar imágenes de personas"
       },
       "edit": {
         "image_file": "Imagen editada",
@@ -783,7 +812,8 @@
         "number_images_tip": "Número de resultados de edición generados",
         "style_type_tip": "Estilo de la imagen editada, solo aplicable para la versión V_2 y posteriores",
         "seed_tip": "Controla la aleatoriedad de los resultados de edición",
-        "magic_prompt_option_tip": "Optimización inteligente de las palabras clave de edición"
+        "magic_prompt_option_tip": "Optimización inteligente de las palabras clave de edición",
+        "rendering_speed_tip": "Controla el equilibrio entre velocidad y calidad de renderizado, solo aplica para la versión V_3"
       },
       "remix": {
         "model_tip": "Seleccione la versión del modelo de inteligencia artificial para usar en el remix",
@@ -794,7 +824,8 @@
         "seed_tip": "Controla la aleatoriedad de los resultados del remix",
         "style_type_tip": "Estilo de la imagen tras el remix, solo aplicable a partir de la versión V_2",
         "negative_prompt_tip": "Describa los elementos que no desea ver en los resultados del remix",
-        "magic_prompt_option_tip": "Optimización inteligente de las palabras clave para el remix"
+        "magic_prompt_option_tip": "Optimización inteligente de las palabras clave para el remix",
+        "rendering_speed_tip": "Controla el equilibrio entre velocidad y calidad de renderizado, solo aplica para la versión V_3"
       },
       "upscale": {
         "image_file": "Imagen que se desea ampliar",
@@ -814,19 +845,72 @@
       "prompt_placeholder_edit": "Introduce la descripción de tu imagen, utiliza comillas dobles \" \" para texto a dibujar",
       "proxy_required": "Actualmente es necesario tener un proxy activo para ver las imágenes generadas, en el futuro se soportará conexión directa desde China",
       "image_file_required": "Por favor, carga una imagen primero",
-      "image_file_retry": "Vuelve a cargar la imagen"
-    },
-    "plantuml": {
-      "download": {
-        "failed": "Descarga fallida, por favor verifica la conexión a internet",
-        "png": "Descargar PNG",
-        "svg": "Descargar SVG"
+      "image_file_retry": "Vuelve a cargar la imagen",
+      "style_types": {
+        "auto": "Automático",
+        "general": "General",
+        "realistic": "Realista",
+        "design": "Diseño",
+        "3d": "3D",
+        "anime": "Anime"
       },
-      "tabs": {
-        "preview": "Vista previa",
-        "source": "Código fuente"
+      "rendering_speeds": {
+        "default": "Por defecto",
+        "turbo": "Rápido",
+        "quality": "Alta calidad"
       },
-      "title": "Diagrama PlantUML"
+      "quality_options": {
+        "auto": "Automático",
+        "low": "Baja",
+        "medium": "Media",
+        "high": "Alta"
+      },
+      "moderation_options": {
+        "auto": "Automática",
+        "low": "Baja"
+      },
+      "background_options": {
+        "auto": "Automática",
+        "transparent": "Transparente",
+        "opaque": "Opaca"
+      },
+      "person_generation_options": {
+        "allow_all": "Permitir todas",
+        "allow_adult": "Permitir adultos",
+        "allow_none": "No permitir"
+      },
+      "aspect_ratios": {
+        "square": "Cuadrada",
+        "portrait": "Vertical",
+        "landscape": "Horizontal"
+      },
+      "seed_desc_tip": "La misma semilla y descripción pueden generar imágenes similares. Usa -1 para que sea diferente cada vez",
+      "rendering_speed": "Velocidad de renderizado",
+      "paint_course": "Tutorial",
+      "prompt_placeholder_en": "Introduce una descripción de imagen en inglés, actualmente Imagen solo admite indicaciones en inglés",
+      "image_placeholder": "Sin imagen disponible",
+      "image_retry": "Reintentar",
+      "translating": "Traduciendo...",
+      "quality": "Calidad",
+      "moderation": "Sensibilidad",
+      "background": "Fondo",
+      "text_desc_required": "Por favor, ingresa primero una descripción de la imagen",
+      "req_error_text": "Fallo en la ejecución, por favor vuelve a intentarlo. Evita palabras relacionadas con derechos de autor y términos sensibles en tu indicación.",
+      "req_error_token": "Por favor, verifica la validez del token",
+      "req_error_no_balance": "Por favor, verifica la validez del token",
+      "image_handle_required": "Por favor, carga una imagen primero",
+      "auto_create_paint": "Crear automáticamente una nueva imagen",
+      "auto_create_paint_tip": "Después de generar la imagen, se creará automáticamente una nueva imagen",
+      "select_model": "Seleccionar modelo",
+      "input_parameters": "Parámetros de entrada",
+      "input_image": "Imagen de entrada",
+      "generated_image": "Imagen generada",
+      "pricing": "Precios",
+      "model_and_pricing": "Modelo y precios",
+      "per_image": "Por imagen",
+      "per_images": "Por imagen",
+      "required_field": "Campo obligatorio",
+      "uploaded_input": "Entrada ya cargada"
     },
     "prompts": {
       "explanation": "Ayúdame a explicar este concepto",
@@ -880,7 +964,8 @@
       "zhinao": "360 Inteligente",
       "zhipu": "ZhiPu IA",
       "voyageai": "Voyage AI",
-      "qiniu": "Qiniu AI"
+      "qiniu": "Qiniu AI",
+      "tokenflux": "TokenFlux"
     },
     "restore": {
       "confirm": "¿Está seguro de que desea restaurar los datos?",
@@ -897,7 +982,12 @@
       "title": "Restauración de Datos"
     },
     "settings": {
-      "about": "Acerca de nosotros",
+      "about": {
+        "debug": {
+          "title": "Panel de depuración",
+          "open": "Abrir"
+        }
+      },
       "about.checkingUpdate": "Verificando actualizaciones...",
       "about.checkUpdate": "Comprobar actualizaciones",
       "about.checkUpdate.available": "Actualizar ahora",
@@ -967,8 +1057,6 @@
         "minute_interval_other": "{{count}} minutos",
         "notion.api_key": "Clave de API de Notion",
         "notion.api_key_placeholder": "Introduzca la clave de API de Notion",
-        "notion.auto_split": "Dividir automáticamente las conversaciones al exportar",
-        "notion.auto_split_tip": "Cuando se exportan temas largos, se dividirán automáticamente en páginas en Notion",
         "notion.check": {
           "button": "Verificar",
           "empty_api_key": "API key no configurada",
@@ -982,9 +1070,6 @@
         "notion.help": "Documentación de configuración de Notion",
         "notion.page_name_key": "Campo del nombre de la página",
         "notion.page_name_key_placeholder": "Introduzca el campo del nombre de la página, por defecto es Nombre",
-        "notion.split_size": "Tamaño de la división automática",
-        "notion.split_size_help": "Para usuarios gratuitos de Notion, se recomienda establecerlo en 90, y para usuarios avanzados, en 24990. El valor predeterminado es 90",
-        "notion.split_size_placeholder": "Introduzca el límite de bloques por página (predeterminado 90)",
         "notion.title": "Configuración de Notion",
         "obsidian": {
           "title": "Configuración de Obsidian",
@@ -1141,7 +1226,12 @@
       "display.zoom.title": "Configuración de zoom",
       "display.topic.title": "Configuración de tema",
       "font_size.title": "Tamaño de fuente de mensajes",
-      "general": "Configuración general",
+      "general": {
+        "early_access": {
+          "title": "Acceso anticipado",
+          "tooltip": "Si está activado, se utilizará la última versión desde GitHub, lo que puede resultar en descargas más lentas. Asegúrate de hacer una copia de seguridad de tus datos con anticipación."
+        }
+      },
       "general.avatar.reset": "Restablecer avatar",
       "general.backup.button": "Hacer copia de seguridad",
       "general.backup.title": "Copia de seguridad y restauración de datos",
@@ -1169,7 +1259,17 @@
         "actions": "Acciones",
         "active": "Activar",
         "addError": "Fallo al agregar servidor",
-        "addServer": "Agregar servidor",
+        "addServer": {
+          "create": "Crear rápidamente",
+          "importFrom": {
+            "tooltip": "Copia la configuración JSON desde la página de introducción de MCP Servers (prefiere usar la configuración NPX o UVX) y pégala en el campo de entrada.",
+            "placeholder": "Pega la configuración JSON del servidor MCP",
+            "invalid": "Entrada inválida, por favor verifica el formato JSON",
+            "nameExists": "El servidor ya existe: {{name}}",
+            "oneServer": "Solo puedes guardar una configuración de servidor MCP a la vez",
+            "connectionFailed": "Conexión fallida"
+          }
+        },
         "addSuccess": "Servidor agregado exitosamente",
         "args": "Argumentos",
         "argsTooltip": "Cada argumento en una línea",
@@ -1300,7 +1400,11 @@
         "tags": "Etiquetas",
         "tagsPlaceholder": "Ingrese etiquetas",
         "providerPlaceholder": "Nombre del proveedor",
-        "advancedSettings": "Configuración avanzada"
+        "advancedSettings": "Configuración avanzada",
+        "disable": {
+          "description": "No activar las funciones del servicio MCP"
+        },
+        "noDescriptionAvailable": "Sin descripción disponible"
       },
       "messages.divider": "Separador de mensajes",
       "messages.divider.tooltip": "No aplicable para mensajes de estilo burbuja",
@@ -1429,13 +1533,23 @@
           "placeholder": "Por favor, introduzca el contenido en formato Markdown...",
           "markdown_editor_default_value": "Área de vista previa"
         },
-        "basic_auth": "Autenticación HTTP",
+        "basic_auth": {
+          "password": {
+            "tip": ""
+          }
+        },
         "basic_auth.tip": "Aplicable para instancias desplegadas a través del servidor (ver documento). Actualmente solo se admite el esquema Basic (RFC7617).",
         "basic_auth.user_name": "Nombre de usuario",
         "basic_auth.user_name.tip": "Déjelo vacío para desactivar",
         "basic_auth.password": "Contraseña",
         "bills": "Facturas",
-        "no_models_for_check": "No hay modelos disponibles para revisar (por ejemplo, modelos de conversación)"
+        "no_models_for_check": "No hay modelos disponibles para revisar (por ejemplo, modelos de conversación)",
+        "openai": {
+          "alert": "El proveedor OpenAI ya no admite métodos antiguos de llamada; si estás usando una API de terceros, crea un nuevo proveedor"
+        },
+        "dmxapi": {
+          "select_platform": "Seleccionar plataforma"
+        }
       },
       "proxy": {
         "mode": {
@@ -1475,7 +1589,10 @@
         "toggle_show_topics": "Alternar visibilidad de temas",
         "zoom_in": "Ampliar interfaz",
         "zoom_out": "Reducir interfaz",
-        "zoom_reset": "Restablecer zoom"
+        "zoom_reset": "Restablecer zoom",
+        "exit_fullscreen": "Salir de pantalla completa",
+        "selection_assistant_toggle": "Activar/desactivar asistente de selección",
+        "search_message_in_chat": "Buscar mensaje en la conversación actual"
       },
       "theme.system": "Sistema",
       "theme.dark": "Oscuro",
@@ -1616,7 +1733,29 @@
       "messages.math_engine.none": "Ninguno",
       "models.manage.add_listed": "Agregar modelo de la lista",
       "models.manage.remove_listed": "Eliminar modelo de la lista",
-      "zoom.title": "Zoom de página"
+      "automata": {
+        "title": "Activación HTTP",
+        "enabled": "Habilitado",
+        "host": "Dirección del host",
+        "port": "Puerto",
+        "secret": {
+          "placeholder": "Por favor ingresa la clave secreta"
+        },
+        "status": "Estado"
+      },
+      "notification": {
+        "title": "Configuración de notificaciones",
+        "assistant": "Mensajes del asistente",
+        "backup": "Copia de seguridad",
+        "knowledge_embed": "Incrustación de conocimiento"
+      },
+      "zoom": {
+        "title": "Zoom",
+        "reset": "Restablecer"
+      },
+      "openai": {
+        "title": "Configuración de OpenAI"
+      }
     },
     "translate": {
       "any.language": "cualquier idioma",
@@ -1638,13 +1777,24 @@
       "input.placeholder": "Ingrese el texto para traducir",
       "output.placeholder": "Traducción",
       "processing": "Traduciendo...",
-      "scroll_sync.disable": "Deshabilitar sincronización de desplazamiento",
-      "scroll_sync.enable": "Habilitar sincronización de desplazamiento",
       "title": "Traducción",
       "tooltip.newline": "Salto de línea",
       "menu": {
         "description": "Traducir el contenido del campo de entrada actual"
-      }
+      },
+      "settings": {
+        "title": "Configuración de traducción",
+        "model": "Configuración del modelo",
+        "model_desc": "Modelo utilizado por el servicio de traducción",
+        "bidirectional": "Configuración de traducción bidireccional",
+        "bidirectional_tip": "Al activar esta opción, solo se admite la traducción bidireccional entre el idioma de origen y el idioma de destino",
+        "scroll_sync": "Configuración de sincronización de desplazamiento"
+      },
+      "target_language": "Idioma de destino",
+      "alter_language": "Idioma alternativo",
+      "closed": "Traducción desactivada",
+      "copied": "Contenido traducido copiado",
+      "empty": "El contenido traducido está vacío"
     },
     "tray": {
       "quit": "Salir",
@@ -1663,6 +1813,171 @@
       "later": "Más tarde",
       "install": "Instalar",
       "noReleaseNotes": "Sin notas de la versión"
+    },
+    "notification": {
+      "assistant": "Respuesta del asistente"
+    },
+    "selection": {
+      "action": {
+        "builtin": {
+          "translate": "Traducir",
+          "explain": "Explicar",
+          "summary": "Resumir",
+          "search": "Buscar",
+          "refine": "Refinar",
+          "copy": "Copiar",
+          "quote": "Citar"
+        },
+        "window": {
+          "pin": "Fijar en la parte superior",
+          "pinned": "Fijado en la parte superior",
+          "opacity": "Opacidad de la ventana",
+          "original_show": "Mostrar texto original",
+          "original_hide": "Ocultar texto original",
+          "original_copy": "Copiar texto original",
+          "esc_close": "Esc Cerrar",
+          "esc_stop": "Esc Detener",
+          "c_copy": "C Copiar",
+          "r_regenerate": "R Regenerar"
+        },
+        "translate": {
+          "smart_translate_tips": "Traducción inteligente: el contenido se traducirá primero al idioma de destino; si el contenido ya está en el idioma de destino, se traducirá al idioma alternativo"
+        }
+      },
+      "settings": {
+        "enable": {
+          "title": "Habilitar",
+          "description": "Actualmente solo es compatible con Windows"
+        },
+        "toolbar": {
+          "trigger_mode": {
+            "title": "Modo de activación",
+            "description": "Selecciona texto para mostrar inmediatamente la barra de herramientas, o mantén presionada la tecla Ctrl después de seleccionar texto para mostrarla.",
+            "description_note": "Algunas aplicaciones no admiten la selección de texto mediante la tecla Ctrl. Si utilizas herramientas como AHK para reasignar la tecla Ctrl, podría impedir que funcione la selección de texto en algunas aplicaciones.",
+            "selected": "Seleccionar texto",
+            "ctrlkey": "Tecla Ctrl"
+          },
+          "compact_mode": {
+            "title": "Modo compacto",
+            "description": "En modo compacto, solo se muestran los iconos, sin mostrar texto"
+          },
+          "title": "Barra de herramientas"
+        },
+        "window": {
+          "follow_toolbar": {
+            "title": "Seguir barra de herramientas",
+            "description": "La posición de la ventana seguirá la visualización de la barra de herramientas; si se desactiva, siempre se mostrará centrada"
+          },
+          "remember_size": {
+            "title": "Recordar tamaño",
+            "description": "Durante la ejecución de la aplicación, la ventana se mostrará con el tamaño ajustado la última vez"
+          },
+          "auto_close": {
+            "title": "Cierre automático",
+            "description": "Cuando la ventana no esté en primer plano y pierda el foco, se cerrará automáticamente"
+          },
+          "auto_pin": {
+            "title": "Fijar automáticamente",
+            "description": "La ventana se colocará en la parte superior por defecto"
+          },
+          "opacity": {
+            "title": "Opacidad",
+            "description": "Establece la opacidad predeterminada de la ventana; 100% significa completamente opaco"
+          },
+          "title": "Ventana de funciones"
+        },
+        "actions": {
+          "reset": {
+            "button": "Restablecer",
+            "tooltip": "Restablecer a las funciones predeterminadas; las funciones personalizadas no se eliminarán",
+            "confirm": "¿Estás seguro de restablecer a las funciones predeterminadas? Las funciones personalizadas no se eliminarán."
+          },
+          "add_tooltip": {
+            "enabled": "Agregar función personalizada",
+            "disabled": "Se alcanzó el límite máximo de funciones personalizadas ({{max}})"
+          },
+          "title": "Funciones",
+          "delete_confirm": "¿Estás seguro de eliminar esta función personalizada?",
+          "drag_hint": "Arrastrar para ordenar; mueve hacia arriba para activar la función ({{enabled}}/{{max}})"
+        },
+        "advanced": {
+          "filter_mode": {
+            "title": "Aplicar filtro",
+            "description": "Puedes limitar que el asistente de selección solo funcione en aplicaciones específicas (lista blanca) o que no funcione (lista negra)",
+            "default": "Desactivado",
+            "whitelist": "Lista blanca",
+            "blacklist": "Lista negra"
+          },
+          "filter_list": {
+            "title": "Lista de filtros",
+            "description": "Función avanzada, se recomienda configurarla solo si tienes experiencia y conocimiento"
+          },
+          "title": "Avanzado"
+        },
+        "user_modal": {
+          "title": {
+            "add": "Agregar función personalizada",
+            "edit": "Editar función personalizada"
+          },
+          "name": {
+            "label": "Nombre",
+            "hint": "Por favor ingresa el nombre de la función"
+          },
+          "icon": {
+            "label": "Icono",
+            "placeholder": "Ingresa el nombre del icono Lucide",
+            "error": "Nombre de icono inválido, por favor verifica la entrada",
+            "tooltip": "El nombre del icono Lucide debe estar en minúsculas, por ejemplo: arrow-right",
+            "view_all": "Ver todos los iconos",
+            "random": "Icono aleatorio"
+          },
+          "model": {
+            "label": "Modelo",
+            "tooltip": "Usar asistente: usará tanto el prompt del sistema del asistente como los parámetros del modelo",
+            "default": "Modelo predeterminado",
+            "assistant": "Usar asistente"
+          },
+          "assistant": {
+            "label": "Seleccionar asistente",
+            "default": "Predeterminado"
+          },
+          "prompt": {
+            "label": "Prompt del usuario",
+            "tooltip": "Prompt del usuario, como complemento a la entrada seleccionada, no sobrescribe el prompt del sistema del asistente",
+            "placeholder": "Usa el marcador de posición {{text}} para representar el texto seleccionado. Si se deja vacío, el texto seleccionado se añadirá al final de este prompt",
+            "placeholder_text": "Marcador de posición",
+            "copy_placeholder": "Copiar marcador de posición"
+          }
+        },
+        "search_modal": {
+          "engine": {
+            "label": "Motor de búsqueda",
+            "custom": "Personalizado"
+          },
+          "custom": {
+            "name": {
+              "label": "Nombre personalizado",
+              "hint": "Por favor ingresa el nombre del motor de búsqueda",
+              "max_length": "El nombre no puede tener más de 16 caracteres"
+            },
+            "url": {
+              "label": "URL de búsqueda personalizada",
+              "hint": "Usa {{queryString}} para representar el término de búsqueda",
+              "required": "Por favor ingresa la URL de búsqueda",
+              "invalid_format": "Por favor ingresa una URL válida que comience con http:// o https://",
+              "missing_placeholder": "La URL debe contener el marcador de posición {{queryString}}"
+            },
+            "test": "Probar"
+          },
+          "title": "Configurar motor de búsqueda"
+        },
+        "filter_modal": {
+          "title": "Aplicar lista de filtros",
+          "user_tips": "Por favor, introduce los nombres de los archivos ejecutables de las aplicaciones, uno por línea, sin distinguir mayúsculas y minúsculas, se admiten coincidencias aproximadas. Por ejemplo: chrome.exe, weixin.exe, Cherry Studio.exe, etc."
+        },
+        "experimental": "Funciones experimentales"
+      },
+      "name": "Asistente de selección"
     }
   }
 }
