@@ -16216,6 +16216,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"remove-markdown@npm:^0.6.2":
+  version: 0.6.2
+  resolution: "remove-markdown@npm:0.6.2"
+  checksum: 10c0/d26fb020b202f227877a29701fcbc96980af3c17001ae46f3253ba21307babcfa424006a207161f83ed04efe19fc9be6b084bd1308ef0b2217c59139e6ef6eb4
+  languageName: node
+  linkType: hard
+
 "repeat-string@npm:^1.0.0":
   version: 1.6.1
   resolution: "repeat-string@npm:1.6.1"
@@ -18793,6 +18800,7 @@ __metadata:
     remark-cjk-friendly: "npm:^1.1.0"
     remark-gfm: "npm:^4.0.0"
     remark-math: "npm:^6.0.0"
+    remove-markdown: "npm:^0.6.2"
     rollup-plugin-visualizer: "npm:^5.12.0"
     sass: "npm:^1.88.0"
     selection-hook: "npm:^0.9.23"
