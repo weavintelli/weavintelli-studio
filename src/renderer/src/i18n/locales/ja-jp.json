@@ -703,7 +703,8 @@
       "warn.siyuan.exporting": "思源ノートにエクスポート中です。重複してエクスポートしないでください!",
       "error.yuque.no_config": "語雀のAPIアドレスまたはトークンが設定されていません",
       "download.success": "ダウンロードに成功しました",
-      "download.failed": "ダウンロードに失敗しました"
+      "download.failed": "ダウンロードに失敗しました",
+      "error.fetchTopicName": "トピック名の取得に失敗しました"
     },
     "minapp": {
       "popup": {
