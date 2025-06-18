@@ -183,7 +183,7 @@
       "input.new.context": "清除上下文 {{Command}}",
       "input.new_topic": "新話題 {{Command}}",
       "input.pause": "暫停",
-      "input.placeholder": "在此輸入您的訊息...",
+      "input.placeholder": "在此輸入您的訊息，按 {{key}} 傳送...",
       "input.send": "傳送",
       "input.settings": "設定",
       "input.topics": " 話題 ",
@@ -964,6 +964,17 @@
       "required_field": "必填欄位",
       "uploaded_input": "已上傳輸入"
     },
+    "price": {
+      "cost": "花費",
+      "currency": "幣種",
+      "custom": "自訂",
+      "custom_currency": "自訂幣種",
+      "custom_currency_placeholder": "請輸入自訂幣種",
+      "input": "輸入價格",
+      "million_tokens": "M Tokens",
+      "output": "輸出價格",
+      "price": "價格"
+    },
     "prompts": {
       "explanation": "幫我解釋一下這個概念",
       "summarize": "幫我總結一下這段話",
@@ -1019,7 +1030,9 @@
       "voyageai": "Voyage AI",
       "qiniu": "七牛雲 AI 推理",
       "tokenflux": "TokenFlux",
-      "302ai": "302.AI"
+      "302ai": "302.AI",
+      "lanyun": "藍耘",
+      "vertexai": "Vertex AI"
     },
     "restore": {
       "confirm": "確定要復原資料嗎？",
@@ -1119,7 +1132,8 @@
           "obsidian": "匯出到Obsidian",
           "siyuan": "匯出到思源筆記",
           "joplin": "匯出到Joplin",
-          "docx": "匯出為Word"
+          "docx": "匯出為Word",
+          "plain_text": "複製為純文本"
         },
         "joplin": {
           "check": {
@@ -1605,6 +1619,10 @@
       "models.translate_model_prompt_title": "翻譯模型提示詞",
       "models.quick_assistant_model": "快捷助手模型",
       "models.quick_assistant_model_description": "快捷助手使用的預設模型",
+      "models.quick_assistant_selection": "選擇助手",
+      "models.quick_assistant_default_tag": "預設",
+      "models.use_model": "預設模型",
+      "models.use_assistant": "使用助手",
       "moresetting": "更多設定",
       "moresetting.check.confirm": "確認勾選",
       "moresetting.check.warn": "請謹慎勾選此選項，勾選錯誤會導致模型無法正常使用！！！",
@@ -1684,6 +1702,27 @@
         },
         "openai": {
           "alert": "OpenAI Provider 不再支援舊的呼叫方法。如果使用第三方 API，請建立新的服務供應商"
+        },
+        "vertex_ai": {
+          "project_id": "專案ID",
+          "project_id_placeholder": "your-google-cloud-project-id",
+          "project_id_help": "您的 Google Cloud 專案 ID",
+          "location": "地區",
+          "location_help": "Vertex AI 服務地區，例如：us-central1",
+          "service_account": {
+            "title": "服務帳戶設定",
+            "private_key": "私密金鑰",
+            "private_key_placeholder": "輸入服務帳戶私密金鑰",
+            "private_key_help": "從 Google Cloud Console 下載的 JSON 金鑰檔案中的 private_key 欄位",
+            "client_email": "Client Email",
+            "client_email_placeholder": "輸入服務帳戶 client email",
+            "client_email_help": "從 Google Cloud Console 下載的 JSON 金鑰檔案中的 client_email 欄位",
+            "description": "使用服務帳戶進行身份驗證，適用於 ADC 不可用的環境",
+            "auth_success": "服務帳戶驗證成功",
+            "incomplete_config": "請先完成服務帳戶設定"
+          },
+          "documentation": "檢視官方文件以取得更多設定詳細資訊：",
+          "learn_more": "瞭解更多"
         }
       },
       "proxy": {
@@ -1873,7 +1912,8 @@
         "model_desc": "翻譯服務使用的模型",
         "bidirectional": "雙向翻譯設定",
         "bidirectional_tip": "開啟後，僅支援在源語言和目標語言之間進行雙向翻譯",
-        "scroll_sync": "滾動同步設定"
+        "scroll_sync": "滾動同步設定",
+        "preview": "Markdown 預覽"
       },
       "title": "翻譯",
       "tooltip.newline": "換行",
@@ -1973,7 +2013,7 @@
           },
           "opacity": {
             "title": "透明度",
-            "description": "設置視窗的默認透明度，100%為完全不透明"
+            "description": "設置視窗的預設透明度，100%為完全不透明"
           }
         },
         "actions": {

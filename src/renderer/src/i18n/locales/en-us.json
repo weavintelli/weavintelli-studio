@@ -183,7 +183,7 @@
       "input.new.context": "Clear Context {{Command}}",
       "input.new_topic": "New Topic {{Command}}",
       "input.pause": "Pause",
-      "input.placeholder": "Type your message here...",
+      "input.placeholder": "Type your message here, press {{key}} to send...",
       "input.send": "Send",
       "input.settings": "Settings",
       "input.topics": " Topics ",
@@ -786,9 +786,21 @@
         "string": "Text"
       },
       "pinned": "Pinned",
-      "rerank_model": "Reordering Model",
-      "rerank_model_support_provider": "Currently, the reordering model only supports some providers ({{provider}})",
-      "rerank_model_not_support_provider": "Currently, the reordering model does not support this provider ({{provider}})",
+      "price": {
+        "cost": "Cost",
+        "currency": "Currency",
+        "custom": "Custom",
+        "custom_currency": "Custom Currency",
+        "custom_currency_placeholder": "Enter Custom Currency",
+        "input": "Input Price",
+        "million_tokens": "M Tokens",
+        "output": "Output Price",
+        "price": "Price"
+      },
+      "reasoning": "Reasoning",
+      "rerank_model": "Reranker",
+      "rerank_model_support_provider": "Currently, the reranker model only supports some providers ({{provider}})",
+      "rerank_model_not_support_provider": "Currently, the reranker model does not support this provider ({{provider}})",
       "rerank_model_tooltip": "Click the Manage button in Settings -> Model Services to add.",
       "search": "Search models...",
       "stream_output": "Stream output",
@@ -798,7 +810,7 @@
         "free": "Free",
         "function_calling": "Tool",
         "reasoning": "Reasoning",
-        "rerank": "Reordering",
+        "rerank": "Reranker",
         "select": "Select Model Types",
         "text": "Text",
         "vision": "Vision",
@@ -1019,7 +1031,9 @@
       "voyageai": "Voyage AI",
       "qiniu": "Qiniu AI",
       "tokenflux": "TokenFlux",
-      "302ai": "302.AI"
+      "302ai": "302.AI",
+      "lanyun": "LANYUN",
+      "vertexai": "Vertex AI"
     },
     "restore": {
       "confirm": "Are you sure you want to restore data?",
@@ -1119,7 +1133,8 @@
           "obsidian": "Export to Obsidian",
           "siyuan": "Export to SiYuan Note",
           "joplin": "Export to Joplin",
-          "docx": "Export as Word"
+          "docx": "Export as Word",
+          "plain_text": "Copy as Plain Text"
         },
         "joplin": {
           "check": {
@@ -1608,6 +1623,10 @@
       "models.translate_model_prompt_title": "Translate Model Prompt",
       "models.quick_assistant_model": "Quick Assistant Model",
       "models.quick_assistant_model_description": "Default model used by Quick Assistant",
+      "models.quick_assistant_selection": "Select Assistant",
+      "models.quick_assistant_default_tag": "Default",
+      "models.use_model": "Default Model",
+      "models.use_assistant": "Use Assistant",
       "moresetting": "More Settings",
       "moresetting.check.confirm": "Confirm Selection",
       "moresetting.check.warn": "Please be cautious when selecting this option. Incorrect selection may cause the model to malfunction!",
@@ -1693,6 +1712,27 @@
           "title": "Model Notes",
           "placeholder": "Enter Markdown content...",
           "markdown_editor_default_value": "Preview area"
+        },
+        "vertex_ai": {
+          "project_id": "Project ID",
+          "project_id_placeholder": "your-google-cloud-project-id",
+          "project_id_help": "Your Google Cloud project ID",
+          "location": "Location",
+          "location_help": "Vertex AI service location, e.g., us-central1",
+          "service_account": {
+            "title": "Service Account Configuration",
+            "private_key": "Private Key",
+            "private_key_placeholder": "Enter Service Account private key",
+            "private_key_help": "The private_key field from the JSON key file downloaded from Google Cloud Console",
+            "client_email": "Client Email",
+            "client_email_placeholder": "Enter Service Account client email",
+            "client_email_help": "The client_email field from the JSON key file downloaded from Google Cloud Console",
+            "description": "Use Service Account for authentication, suitable for environments where ADC is not available",
+            "auth_success": "Service Account authenticated successfully",
+            "incomplete_config": "Please complete Service Account configuration first"
+          },
+          "documentation": "View official documentation for more configuration details:",
+          "learn_more": "Learn More"
         }
       },
       "proxy": {
@@ -1874,7 +1914,8 @@
         "model_desc": "Model used for translation service",
         "bidirectional": "Bidirectional Translation Settings",
         "bidirectional_tip": "When enabled, only bidirectional translation between source and target languages is supported",
-        "scroll_sync": "Scroll Sync Settings"
+        "scroll_sync": "Scroll Sync Settings",
+        "preview": "Markdown Preview"
       },
       "title": "Translation",
       "tooltip.newline": "Newline",
